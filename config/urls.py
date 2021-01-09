@@ -8,6 +8,7 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')),
     path('common/', include('common.urls')),
     path('', base_views.index, name='index'),  # '/' 에 해당되는 path
-]
 
-handler404 = 'common.views.page_not_found'
+    path('test/', include('jobs.urls')), #html 및 js 공부를 위한 page
+
+]

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pybo.apps.PyboConfig',
     'common.apps.CommonConfig',
+    'jobs.apps.JobsConfig',
 
 ]
 
