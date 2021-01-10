@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'pybo.apps.PyboConfig',
     'common.apps.CommonConfig',
     'jobs.apps.JobsConfig',
-
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
