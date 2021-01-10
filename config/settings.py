@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'common.apps.CommonConfig',
     'jobs.apps.JobsConfig',
     'rest_framework',
-    'api',
 ]
 
 MIDDLEWARE = [
