@@ -13,7 +13,7 @@ def index(request):
 
 
 def index2(request):
-    return render(request, 'test2.html')
+    return render(request, '')
 
 # @csrf_exempt #function base
 # @method_decorator(login_required, name="dispatch")
@@ -41,12 +41,10 @@ def index2(request):
     #     })
 
 
-@method_decorator(login_required, name="dispatch")
+# @method_decorator(login_required, name="dispatch")
 @method_decorator(csrf_exempt, name='dispatch') #class function
 class Test(APIView):
-    def post(self, requestm):
-        ser = TestPostListSerializer(data=request.data)
-
-        return render(request, 'test3.html'), {
-            'params' : params
-        }
+    def post(self, request):
+        serializer = TestPostListSerializer(data=request.data)
+        if serializer.is_valid():
+            return render(request, '../templates/test3.html', {"params" : request.data})
