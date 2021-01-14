@@ -41,7 +41,8 @@ def index(request):
     page_obj = paginator.get_page(page)
 
     context = {'question_list': page_obj, 'page': page, 'kw': kw, 'so': so}  # <------ so 추가
-    return render(request, 'pybo/question_list.html', context)
+    return render(request, '../templates/question_list.html', context)
+
 
 
 def detail(request, question_id):
@@ -50,4 +51,4 @@ def detail(request, question_id):
     """
     question = get_object_or_404(Question, pk=question_id)
     context = {'question': question}
-    return render(request, 'pybo/question_detail.html', context)
+    return render(request, '../templates/question_detail.html', context)
