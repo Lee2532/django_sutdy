@@ -9,11 +9,16 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
 def index(request):
-    return render(request, 'test.html')
+    return render(request, '../templates/test.html')
 
 
 def index2(request):
-    return render(request, 'test2.html')
+    
+    return render(request, '../templates/test2.html')
+
+
+def index3(request):
+    return render(request, '../templates/crawl.html')
 
 # @csrf_exempt #FBV
 # @method_decorator(login_required, name="dispatch")
