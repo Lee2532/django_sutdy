@@ -84,13 +84,21 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django', # 접근할 database 이름
-        'USER': 'postgres', # 접근할 Owner 계정
+        'ENGINE': 'django.db.backends.mongodb',
+        'NAME': 'django_test', # 접근할 database 이름
+        'USER': 'admin', # 접근할 Owner 계정
         'PASSWORD': '0000', #User PW
         'HOST': 'localhost', #로컬
-        'PORT': '5432', # 포트
-    }
+        'PORT': '27017', # 포트
+    },
+    # 'mongodb' : { #mongo db conn
+    #     'ENGINE': 'django.db.backends.mongodb',
+    #     'NAME': 'django_test', # 접근할 database 이름
+    #     'USER': 'admin', # 접근할 Owner 계정
+    #     'PASSWORD': '0000', #User PW
+    #     'HOST': 'localhost', #로컬
+    #     'PORT': '27017', # 포트
+    # }
 }
 
 
