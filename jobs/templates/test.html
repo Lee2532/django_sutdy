@@ -8,10 +8,23 @@
   <button type="button" class="js button" onclick="test(3,5)">버튼에 이름 넣기</button>
   <div></div>
   <button type="button" class="html2 button" onclick="location.href='../2'">html2 URL</button>
-  <button type="button" class="kakao map test" onclick="get_api_key()">카카오 맵 테스트</button>
+  
+  <div id="map" style="width:500px;height:400px;"></div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=api_key"></script>
+
+  <script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+  </script>
+  
 </body>
 </html>
 
 <script type="text/javascript" src="/static/js/test.js"></script>
 <script type="text/javascript" src="/static/js/kakaomap.js"></script>
-<script type="text/javascript" src="/../../api_key/api_key.json"></script>
+<!-- <script type="text/javascript" src="../../api_key/api_key.json"></script> -->
